@@ -183,6 +183,12 @@ section {
   section {
     padding: 20px;
   }
+  .hero .title  {
+  width: 90%;
+}
+.hero .video {
+  width: 95%;
+}
   nav {
     position: absolute;
     top: 100%;

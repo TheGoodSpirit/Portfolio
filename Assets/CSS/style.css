@@ -7,9 +7,9 @@
   transition: all 0.25s;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-body {
+/* body {
   min-height: 200vh;
-}
+} */
 ion-icon{
   font-size: 1.5rem;
   cursor: pointer;
@@ -33,7 +33,18 @@ header {
   justify-content: space-between;
 }
 header.jamed {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.9);
+}
+header.jamed .logo,
+header.jamed nav .links {
+  color: #fff;
+}
+header.jamed nav .links::before {
+  background-color: #fff;
+}
+header.jamed .outline {
+  border-color: #fff;
+  color: #fff;
 }
 .logo {
   font-weight: 900;
@@ -134,6 +145,38 @@ nav {
 }
 .menu:hover .dropdown-content {
   display: flex;
+}
+
+/* hero section */ 
+section {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  padding: 20px 50px;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.hero {
+  gap: 40px;
+  padding: 150px 20px;
+  flex-direction: column;
+}
+.hero h1 {
+  font-size: 2.5rem;
+}
+.hero .title  {
+  width: 50%;
+  text-align: center;
+}
+.hero .video {
+  position: relative;
+  width: 80%;
+}
+.hero .video video {
+  width: 100%;
 }
 /* Responsive */
 @media (max-width: 700px) {

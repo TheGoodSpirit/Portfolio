@@ -198,7 +198,7 @@ section {
     display: none;
     overflow: hidden;
     flex-direction: column;
-    background: rgba(0, 0, 0, 0.2);
+    background: #fff;
     transition: 0.5s;
   }
   nav.active {

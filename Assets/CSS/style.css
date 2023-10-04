@@ -180,7 +180,7 @@ section {
 }
 /* Responsive */
 @media (max-width: 700px) {
-  header {
+  section {
     padding: 20px;
   }
   nav {

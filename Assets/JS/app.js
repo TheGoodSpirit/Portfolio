@@ -1,7 +1,3 @@
-window.onload = () => {
-  document.querySelector("video").autoplay = true;
-}
-
 window.addEventListener("scroll", () => {
   const header = document.querySelector("header");
   header.classList.toggle("jamed", window.scrollY > 0);
@@ -28,10 +24,10 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     console.log(entry);
     entry.target.classList.toggle("show", entry.isIntersecting);
-    if(entry.isIntersecting) observer.unobserve(entry.target)
+    // if(entry.isIntersecting) observer.unobserve(entry.target)
   });
 }, {
-  rootMargin: "80px" ,
+  rootMargin: "150px" ,
   threshold : 1
 });
 

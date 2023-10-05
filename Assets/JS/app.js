@@ -16,3 +16,21 @@ menuToggler.addEventListener("click", () => {
   const menu = document.querySelector("._menu");
   menu.classList.toggle("down");
 });
+
+
+//  Intersection observer~
+const els = document.querySelectorAll(".ani");
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry);
+    entry.target.classList.toggle("show", entry.isIntersecting);
+    if(entry.isIntersecting) observer.unobserve(entry.target)
+  });
+}, {
+  rootMargin: "80px" ,
+  threshold : 1
+});
+
+els.forEach((el) => {
+  observer.observe(el);
+})

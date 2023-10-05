@@ -10,6 +10,15 @@
 /* body {
   min-height: 200vh;
 } */
+.ani {
+  opacity: 0;
+  transform: translateY(-100px);
+  transition:all 5s;
+}
+.show {
+  opacity: 1;
+  transform: translateY(0px);
+}
 ion-icon{
   font-size: 1.5rem;
   cursor: pointer;
@@ -29,22 +38,15 @@ header {
   padding: 20px 50px;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #000;
+  /* border-bottom: 1px solid #000; */
   justify-content: space-between;
 }
 header.jamed {
-  background: rgba(0, 0, 0, 0.9);
-}
-header.jamed .logo,
-header.jamed nav .links {
-  color: #fff;
-}
-header.jamed nav .links::before {
-  background-color: #fff;
-}
-header.jamed .outline {
-  border-color: #fff;
-  color: #fff;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(19.9px);
+  -webkit-backdrop-filter: blur(19.9px);
 }
 .logo {
   font-weight: 900;
@@ -173,7 +175,7 @@ section {
 }
 .hero .video {
   position: relative;
-  width: 80%;
+  width: 90%;
 }
 .hero .video video {
   width: 100%;

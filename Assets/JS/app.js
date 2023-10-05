@@ -1,3 +1,7 @@
+window.onload = () => {
+  document.querySelector("video").autoplay = true;
+}
+
 window.addEventListener("scroll", () => {
   const header = document.querySelector("header");
   header.classList.toggle("jamed", window.scrollY > 0);

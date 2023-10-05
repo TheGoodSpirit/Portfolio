@@ -182,6 +182,15 @@ section {
 }
 /* Responsive */
 @media (max-width: 700px) {
+  section {
+    padding: 20px;
+  }
+  .hero .title  {
+  width: 90%;
+}
+.hero .video {
+  width: 95%;
+}
   nav {
     position: absolute;
     top: 100%;
@@ -191,7 +200,7 @@ section {
     display: none;
     overflow: hidden;
     flex-direction: column;
-    background: rgba(0, 0, 0, 0.2);
+    background: #fff;
     transition: 0.5s;
   }
   nav.active {

@@ -5,7 +5,7 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   transition: all 0.25s;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 /* body {
   min-height: 200vh;
@@ -22,14 +22,24 @@
 .imgbox img {
   width: 100%;
   height: 100%;
+  filter: grayscale(100%);
   object-fit: contain;
+  transition: filter 2s;
+}
+.imgbox img:hover {
+  filter: grayscale(0%);
 }
 .show {
   opacity: 1;
   transform: translateY(0px);
 }
-ion-icon{
+ion-icon {
+  font-size: 1.5rem;
   cursor: pointer;
+}
+.btn ion-icon,
+.menu span ion-icon {
+  font-size: 1rem;
 }
 a,
 nav .menu span {
@@ -54,8 +64,8 @@ header {
 }
 header.jamed {
   /* From https://css.glass */
-    background: rgb(255, 255, 255);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  background: rgb(255, 255, 255);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   /* backdrop-filter: blur(19.9px);
   -webkit-backdrop-filter: blur(19.9px); */
 }
@@ -114,15 +124,15 @@ nav {
   justify-content: space-around;
 }
 .menuToggler {
-  display:none;
+  display: none;
 }
 .close {
   display: none;
 }
 ._menu.down {
-  display:flex;
+  display: flex;
 }
-.d
+
 /* ---------- Dropdown Menu ----------*/
 .menu {
   position: relative;
@@ -163,7 +173,7 @@ nav {
   display: flex;
 }
 
-/* hero section */ 
+/* hero section */
 section {
   position: relative;
   top: 0;
@@ -171,7 +181,7 @@ section {
   width: 100%;
   display: flex;
   padding: 0px 50px;
-  min-height: 100vh;
+  min-height: 70vh;
   align-items: center;
   justify-content: center;
 }
@@ -183,7 +193,7 @@ section {
 .hero h1 {
   font-size: 2.5rem;
 }
-.hero .title  {
+.hero .title {
   width: 50%;
   text-align: center;
 }
@@ -193,13 +203,11 @@ section {
 }
 .hero .video video {
   width: 100%;
-  background:linear-gradient(to right,rgba(65, 0, 255, 0.4),rgba(255, 0, 232, 0.3));
 }
-
 
 /* feature-section */
 .feature-section {
-  gap: 20px;
+  gap: 50px;
 }
 .feature-section .txt {
   gap: 25px;
@@ -222,14 +230,86 @@ section {
   align-items: center;
   justify-content: flex-start;
 }
+/* portfolio-showcase */
+.portfolio-showcase {
+  flex-direction: column;
+}
+
+/* ---------- Image slide show ----------*/
+.mySlides {display: none}
+img {vertical-align: middle;}
+.slideshow-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color: #717171;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
 
 /* Responsive */
 @media (max-width: 700px) {
   section {
     padding: 10px;
-  }
-  .hero .title  {
-    width: 90%;
   }
   .hero .video {
     width: 95%;
@@ -251,21 +331,22 @@ section {
   nav.active {
     display: flex;
   }
-  .hero .title  {
-    width: 80%;
+  .hero .title {
+    width: 100%;
     text-align: center;
   }
   .menuToggler {
     display: flex;
   }
-  .menu, .feature-section {
+  .menu,
+  .feature-section {
     flex-direction: column;
   }
   .close.active {
     display: flex;
   }
   ._menu.down {
-    display:none;
+    display: none;
   }
   .dropdown-content {
     position: relative;

@@ -1,3 +1,4 @@
+// header animation
 window.addEventListener("scroll", () => {
   const header = document.querySelector("header");
   header.classList.toggle("jamed", window.scrollY > 0);
@@ -6,14 +7,11 @@ window.addEventListener("scroll", () => {
 // Menu Toggle
 const menuToggler = document.querySelector(".menuToggler");
 menuToggler.addEventListener("click", () => {
-  // show nav bar
-  const nav = document.querySelector("nav");
-  nav.classList.toggle("active");
-  // show close icon
-  const close = document.querySelector(".close");
-  close.classList.toggle("active");
-  // hide menu icon
   const menu = document.querySelector("._menu");
+  const nav = document.querySelector("nav");
+  const close = document.querySelector(".close");
+  nav.classList.toggle("active");
+  close.classList.toggle("active");
   menu.classList.toggle("down");
 });
 
@@ -37,18 +35,18 @@ els.forEach((el) => {
 });
 
 // image  slider
-let slideIndex = 1;
-showSlides(slideIndex);
-function plusSlides(n) {showSlides(slideIndex += n)}
-function currentSlide(n) {showSlides(slideIndex = n)}
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {slides[i].style.display = "none";  }
-  for (i = 0; i < dots.length; i++) {dots[i].className = dots[i].className.replace(" active", "");}
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
+// let slideIndex = 1;
+// showSlides(slideIndex);
+// function plusSlides(n) {showSlides(slideIndex += n)}
+// function currentSlide(n) {showSlides(slideIndex = n)}
+// function showSlides(n) {
+//   let i;
+//   let slides = document.getElementsByClassName("mySlides");
+//   let dots = document.getElementsByClassName("dot");
+//   if (n > slides.length) {slideIndex = 1}    
+//   if (n < 1) {slideIndex = slides.length}
+//   for (i = 0; i < slides.length; i++) {slides[i].style.display = "none";  }
+//   for (i = 0; i < dots.length; i++) {dots[i].className = dots[i].className.replace(" active", "");}
+//   slides[slideIndex-1].style.display = "block";  
+//   dots[slideIndex-1].className += " active";
+// }

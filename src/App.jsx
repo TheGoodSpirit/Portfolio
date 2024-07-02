@@ -16,10 +16,10 @@ function App() {
       {/* Routing  */}
       <Routes>
           <Route path="/" element={<Home />} />  
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/blog" element={<Blog />} />
+          <Route path="/Portfolio" element={<Portfolio />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/Contact" element={<Contact />} />
+          <Route path="/Blog" element={<Blog />} />
       </Routes>
     </Router>
   );

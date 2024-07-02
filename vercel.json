@@ -4,8 +4,5 @@
       "source": "/(.*)",
       "destination": "/"
     }
-  ],
-  "redirects": [
-    { "source": "/", "destination": "/", "permanent": true }
   ]
 }

@@ -16,13 +16,13 @@ const Header = () => {
               />
             </a>
           </div>
-          <div className="block lg:hidden">
-            <button className="flex items-center px-3 py-2 border rounded text-black border-black hover:text-white hover:bg-transparent">
+          <div className="block lg:hidden" >
+            <button id="dropdownDelayButton" data-dropdown-toggle="dropdownDelay" className="flex items-center px-3 py-2 border rounded text-black border-black">
               <ion-icon className="text-2xl" name="menu-outline"></ion-icon>
             </button>
           </div>
-          <div className="w-full block flex-grow hidden lg:flex lg:items-center lg:w-auto">
-            <div className="text-md lg:flex-grow gap-5">
+          <div id="dropdownDelay" className=" z-10 w-full  flex-grow hidden lg:flex lg:items-center lg:w-auto">
+            <div className="text-md lg:flex-grow gap-5" >
               <a
                 href="/"
                 className="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-primary rounded-md hover:text-secondary mr-4 p-2"

@@ -1,15 +1,16 @@
 import React from "react";
 import "../App.css";
+import logo from "../assets/logo.png";
 
 const Header = () => {
   return (
     <>
       <header>
-        <nav className="flex items-center justify-between flex-wrap p-4">
+        <nav className="flex items-center justify-between flex-wrap p-2">
           <div className="flex items-center flex-shrink-0 text-white mr-6">
             <a href="/">
               <img
-                src="./logo.png"
+                src={logo}
                 alt="Logo"
                 className="h-10 w-10 md:h-20 md:w-20 lg:h-30 lg:w-30 rounded-full"
               />
@@ -24,31 +25,25 @@ const Header = () => {
             <div className="text-md lg:flex-grow gap-5">
               <a
                 href="/"
-                className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-neutral-500 mr-4"
+                className="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-primary rounded-md hover:text-secondary mr-4 p-2"
               >
                 Home
               </a>
               <a
-                href="/"
-                className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-neutral-500 mr-4"
-              >
-                Activities
-              </a>
-              <a
                 href="/About"
-                className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-neutral-500 mr-4"
+                className="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-primary rounded-md hover:text-secondary mr-4 p-2"
               >
                 About
               </a>
               <a
                 href="/Portfolio"
-                className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-neutral-500 mr-4"
+                className="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-primary rounded-md hover:text-secondary mr-4 p-2"
               >
                 Portfolio
               </a>
               <a
                 href="/Blog"
-                className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-neutral-500 mr-4" 
+                className="block mt-4 lg:inline-block lg:mt-0 text-black hover:bg-primary rounded-md hover:text-secondary mr-4 p-2"
               >
                 Blog
               </a>

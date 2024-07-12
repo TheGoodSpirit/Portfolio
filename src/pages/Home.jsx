@@ -20,7 +20,7 @@ const Home = () => {
               </p>
             </div>
             <div className="flex w-11/12 md:w-8/12 xl:w-6/12">
-              <div className="flex rounded-md w-full md:flex-row flex-col md:gap-0 items-center gap-2">
+              <div className="flex rounded-md w-full md:flex-row flex-col md:gap-0 items-center gap-5">
                 <input
                   type="email"
                   name="q"

@@ -1,8 +1,12 @@
 import React from "react";
+import { Helmet } from 'react-helmet';
 
 const Home = () => {
   return (
     <>
+      <Helmet>
+        <title>Home</title>
+      </Helmet>
       <section className=" bg-primary dark:bg-neutral">
         <div className="dark:bg-transparent">
           <div className="mx-auto flex flex-col items-center py-12 sm:py-24">
